@@ -4,6 +4,8 @@
     --very-dark-cyan: hsl(179, 100%, 13%);
     --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
     --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+    --family-lexend-deca: 'Lexend Deca', sans-serif;
+    --family-big-shoulders-display: 'Big Shoulders Display', cursive;
 }
 
 *{
@@ -19,15 +21,137 @@ body{
     align-items: center;
     flex-direction: column;
     font-size: 15px;
-    padding: 3em 0;
+    padding: 5em 0;
     background-color: var(--very-light-gray-background-headings-buttons);
 }
 
 /* Card 3 Columns */
+.card{
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card__son{
+    width: 100%;
+    height: 100%;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.card__son:first-child{
+    background-color: var(--bright-orange);
+}
+
+.card__son:nth-child(2){
+    background-color: var(--dark-cyan);
+}
+
+.card__son:last-child{
+    background-color: var(--very-dark-cyan);
+}
+
+.card__son__illustration{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.card__son__info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.card__son__info h1{
+    font-family: var(--family-big-shoulders-display);
+    font-size: 2rem;
+    color: var(--very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+}
+
+.card__son__info p{
+    font-family: var(--family-lexend-deca);
+    font-size: 1rem;
+    color: var(--transparent-white-paragraphs);
+    margin-top: 1.5em;
+    line-height: 1.5em;
+    max-width: 239px;
+}
+
+.card__son__btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.card__son__btn button{
+    border: none;
+    cursor: pointer;
+    padding: 1em 2.2em;
+    font-size: 1rem;
+    font-family: var(--family-lexend-deca);
+    border-radius: 3em;
+}
+
+#sedans-btn{
+    color: var(--bright-orange);
+}
+
+#suvs-btn{
+    color: var(--dark-cyan);
+}
+
+#luxury-btn{
+    color: var(--very-dark-cyan);
+}
 /* End Card 3 Columns */
 
 /* Media Query For Tablet */
+@media screen and (min-widtH: 500px){
+    .card__son__info p{
+        max-width: 380px;
+    }
+}
+
+@media screen and (min-widtH: 600px){
+    .card__son__info p{
+        max-width: none;
+    }
+}
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */
+@media screen and (min-width: 850px){
+    .card{
+        flex-direction: initial;
+    }
+
+    .card__son{
+        padding: 3em;
+    }
+
+    .card__son__info p{
+        max-width: 220px;
+    }
+
+    .card__son__btn{
+        margin-top: 3em;
+    }
+}
 /* End Media Query For Desktop */
