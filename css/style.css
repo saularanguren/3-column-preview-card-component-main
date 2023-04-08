@@ -106,19 +106,46 @@ body{
     padding: 1em 2.2em;
     font-size: 1rem;
     font-family: var(--family-lexend-deca);
+    border: .2rem solid var(--very-light-gray-background-headings-buttons);
     border-radius: 3em;
+    transition: transform .5s;   
 }
 
-#sedans-btn{
+.card__son__btn button:active{
+    transform: scale(0.9);
+}
+
+#btn-1{
     color: var(--bright-orange);
+    transition: .5s ease;
+    background-color: var(--very-light-gray-background-headings-buttons);
 }
 
-#suvs-btn{
+#btn-1:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: transparent;
+}
+
+#btn-2{
     color: var(--dark-cyan);
+    transition: .5s ease;
+    background-color: var(--very-light-gray-background-headings-buttons);
 }
 
-#luxury-btn{
+#btn-2:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: transparent;
+}
+
+#btn-3{
     color: var(--very-dark-cyan);
+    transition: .5s ease;
+    background-color: var(--very-light-gray-background-headings-buttons);
+}
+
+#btn-3:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: transparent;
 }
 /* End Card 3 Columns */
 
